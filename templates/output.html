@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1"/>
+  <title>TEXT SUMMARIZER</title>
+  <link href="https://fonts.googleapis.com/css2?family=Play&display=swap" rel="stylesheet">
+  <link href="static/css/materialize.css" type="text/css" rel="stylesheet" media="screen,projection"/>
+  <link href="static/css/style.css" type="text/css" rel="stylesheet" media="screen,projection"/>
+  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.5.0/css/all.css" integrity="sha384-B4dIYHKNBt8Bc12p+WXckhzcICo0wtJAoU8YZTY5qE0Id1GSseTk6S+L3BlXeVIU" crossorigin="anonymous">
+  <link rel="stylesheet" href="https://unicons.iconscout.com/release/v4.0.0/css/unicons.css"/>
+</head>
+
+<body>
+  <style>
+    body {
+      background-color: rgb(53, 79, 82);
+      font-family: Play ;
+      text-align: center;
+    }
+    .flex-parent {
+      display: flex;
+    }
+    .jc-center {
+      justify-content: center;
+    }
+    footer {
+    text-align: center;
+    text-shadow:black;
+    margin-top: 12em;
+    padding: 2px;
+    color: whitesmoke;
+  }
+  </style>
+<section>
+  <div class="navbar-fixed" >
+    <nav class="grey darken-4" role="navigation" style="  height: 6em ;position: fixed;">
+      <div class="nav-wrapper container">
+          <h3>TEXT SUMMARIZER</h3>
+      </div>
+    </nav>
+  </div>
+</section>
+<div class="" >
+  <div class="section">
+    <div class="row">
+      <div class="input-field col s12 m10">
+        <div class="icon-block"style="margin-left:10em; margin-top :10em">
+          <h4 align="center" style="color: rgb(255, 255, 255);"> your link is :</h4>
+          <form method="POST" action="/analyze_url">
+
+            <input type="text" name="raw_url" style="color: #e0e1dd; text-align: center;" placeholder="{{ url }}" required="true">
+            <div class="flex-parent jc-center">&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;
+            </div>
+          </form>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<section class="section section-solutions-about #fafafa grey lighten-5">
+  <div class="container white-text">
+    <div class="row">
+      <div class="col s12 m6 grey darken-3">
+        <div class="icon-block">
+          <h4 align="center" style="color: rgb(255, 255, 255);">TEXT SUMMARY</h4>
+          <p class="light">{{ final_summary }}</p>
+        </div>
+      </div>
+      <div class="col s12 m6">
+        <div class="icon-block">
+          <h4 align="center" style="color: rgb(0, 0, 0);">INPUT TEXT</h4>
+          <p class="light" style="color: #000000;">{{ctext}}</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<footer class="page-footer grey darken-4">
+  <div class="container" id="aboutapp">
+    <div class="row">
+        <h6 class="grey-text text-lighten-4" align="center">👷 Project Authors: </h6>
+        <p class="grey-text text-lighten-4" align="center">Lama alshabani & Lujain salah & Shumookh alharthi </p>
+        <p class="grey-text text-lighten-4" align="center">Ebtihal alamri & Haneen alzahrani </p>
+      </div>
+    </div>
+  </footer>
+
+  <script src="https://code.jquery.com/jquery-2.1.1.min.js"></script>
+  <script src="static/js/materialize.js"></script>
+  <script src="static/js/init.js"></script>
+
+  </body>
+</html>
